@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-4">Survey Questions</h1>
+                <hr class="my-4">
+
+                <p class="h2">About You</p>
+
+                <form method="post" action="/">
+                    <div class="form-group">
+                        <label>Name (Required)</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Picture URL (Required)</label>
+                        <input type="text" name="picture" class="form-control" id="formGroupExampleInput2"
+                            placeholder="https://via.placeholder.com/150">
+                    </div>
+                </form>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 1</p>
+                <p>Anime is your life.</p>
+
+                <select name="dropdown" class="chosen" id="q1_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 2</p>
+                <p>Family is important to you.</p>
+
+                <select name="dropdown" class="chosen" id="q2_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 3</p>
+                <p>You think you are more of a logical person than emotional.</p>
+
+                <select name="dropdown" class="chosen" id="q3_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 4</p>
+                <p>You prefer to stay in instead of going out to party.</p>
+
+                <select name="dropdown" class="chosen" id="q4_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 5</p>
+                <p>You rarely get upset.</p>
+
+                <select name="dropdown" class="chosen" id="q5_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 6</p>
+                <p>Watching sports is better than watching reality tv shows.</p>
+
+                <select name="dropdown" class="chosen" id="q6_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 7</p>
+                <p>You are aware of social cues.</p>
+
+                <select name="dropdown" class="chosen" id="q7_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 8</p>
+                <p>You love your current job.</p>
+
+                <select name="dropdown" class="chosen" id="q8_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 9</p>
+                <p>Friendship is just as important as family.</p>
+
+                <select name="dropdown" class="chosen" id="q9_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <hr class="my-4">
+
+                <p class="h2">Question 10</p>
+                <p>How satisfied are you with your life?</p>
+
+                <select name="dropdown" class="chosen" id="q10_answer">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (STRONGLY DISAGREE)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (STRONGLY AGREE)</option>
+                </select>
+
+                <br><br>
+
+                <button type="button" id="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
+                    data-target="#myModal" onclick="myFunction()">Submit Answers</button>
+
+                <br><br>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- https://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Best Match</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="matchName"></p>
+                    <img id="matchImg" src="" height="350" width="300">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeModal" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x, text;
+
+            // Get the value of the input field with id="numb"
+            x = document.getElementById("name").value;
+
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+        $('#submit').on('click', function () {
+            event.preventDefault();
+
+            var userData = {
+                name: $('input[name=name]').val(),
+                photo: $('input[name=picture]').val(),
+                scores: [
+                    $('#q1_answer').val(),
+                    $('#q2_answer').val(),
+                    $('#q3_answer').val(),
+                    $('#q4_answer').val(),
+                    $('#q5_answer').val(),
+                    $('#q6_answer').val(),
+                    $('#q7_answer').val(),
+                    $('#q8_answer').val(),
+                    $('#q9_answer').val(),
+                    $('#q10_answer').val()
+                ]
+            }
+            console.log(userData)
+
+            $.post('/api/friends', userData, function (data) {
+                $('#matchName').text(data.name);
+                $('#matchImg').attr('src', data.photo);
+                $('#results').modal('toggle')
+
+                $("input[name=name]").val("");
+                $("input[name=picture]").val("");
+
+            })
+
+            $('#closeModal').click(function () {
+                $.get('/home', function (req, res) {
+                    location.replace(res);
+                })
+            });
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

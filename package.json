@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Compatibility-based friend finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mymydinh/friend-finder.git"
+  },
+  "author": "Mymy Dinh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "bugs": {
+    "url": "https://github.com/mymydinh/friend-finder/issues"
+  },
+  "homepage": "https://github.com/mymydinh/friend-finder#readme"
+}
