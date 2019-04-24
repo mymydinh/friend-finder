@@ -25,15 +25,17 @@
 
                 <p class="h2">About You</p>
 
-                <form method="post" action="/">
+                <form method="post" action="/" id="reg_form">
                     <div class="form-group">
                         <label>Name (Required)</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="John Doe">
+                        <input type="text" name="name" class="form_text" id="form_name" placeholder="John Doe">
+                        <span class="error_form" id="name_error_message"></span>
                     </div>
                     <div class="form-group">
                         <label>Picture URL (Required)</label>
-                        <input type="text" name="picture" class="form-control" id="formGroupExampleInput2"
+                        <input type="text" name="picture" class="form_text" id="form_url"
                             placeholder="https://via.placeholder.com/150">
+                        <span class="error_form" id="url_error_message"></span>
                     </div>
                 </form>
 
@@ -179,8 +181,8 @@
 
                 <br><br>
 
-                <button type="button" id="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
-                    data-target="#myModal" onclick="myFunction()">Submit Answers</button>
+                <button type="button" id="submit" class="btn btn-primary btn-lg btn-block submit_btn"
+                    data-toggle="modal" data-target="#myModal">Submit Answers</button>
 
                 <br><br>
             </div>
@@ -216,22 +218,64 @@
 
 
     <script type="text/javascript">
-        function myFunction() {
-            var x, text;
+        $(function () {
+            $('#name_error_message').hide();
+            $('#url_error_message').hide();
 
-            // Get the value of the input field with id="numb"
-            x = document.getElementById("name").value;
+            var error_name = false;
+            var error_url = false;
 
-            if (x == "") {
-                alert("Name must be filled out");
-                return false;
+            $('#form_name').focusout(function () {
+                check_name();
+            });
+            $('#form_url').focusout(function () {
+                check_url();
+            });
+        })
+
+        function check_name() {
+            var name = $('#form_name').val().length;
+            if (name < 1) {
+                $('#name_error_message').html('Enter valid name');
+                $('#name_error_message').show();
+            } else {
+                $('#name_error_message').hide();
             }
         }
+
+        function check_url() {
+            var url = $('#form_name').val().length;
+            if (url < 1) {
+                $('#url_error_message').html('Enter valid URL');
+                $('#url_error_message').show();
+            } else {
+                $('#url_error_message').hide();
+            }
+        }
+
+        $('#reg_form').submit(function () {
+            error_name = false;
+            error_url = false;
+
+            check_name();
+            check_url();
+
+            if (error_name == false && error_url == false) {
+                return true;
+            } else {
+                return false;
+            }
+
+
+        })
+
 
         $('#submit').on('click', function () {
             event.preventDefault();
 
-            var userData = {
+
+
+            var userInput = {
                 name: $('input[name=name]').val(),
                 photo: $('input[name=picture]').val(),
                 scores: [
@@ -247,9 +291,9 @@
                     $('#q10_answer').val()
                 ]
             }
-            console.log(userData)
+            // console.log(userInput)
 
-            $.post('/api/friends', userData, function (data) {
+            $.post('/api/friends', userInput, function (data) {
                 $('#matchName').text(data.name);
                 $('#matchImg').attr('src', data.photo);
                 $('#results').modal('toggle')
